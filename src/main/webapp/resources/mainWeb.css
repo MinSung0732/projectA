@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#list{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+#listFieldSet{
+	width: 500px;
+}
