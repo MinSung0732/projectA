@@ -9,7 +9,7 @@
 	</select>
 	
 	<select id="read" resultType="com.project.dto.ListDto">
-		SELECT * from free_board where B_NO =
+		SELECT * from free_board where B_NO = 
 		#{bno}
 	</select>
 	

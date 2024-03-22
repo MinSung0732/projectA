@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.project.dto.ListDto;
+import com.project.dto.WeightDto;
 import com.project.service.BasicService;
 
 import lombok.AllArgsConstructor;
@@ -44,4 +45,25 @@ public class BasicController {
 	public void write() {
 		
 	}
+	
+	@PostMapping("/weight")
+	public String weight(WeightDto dto) {
+		service.weight(dto);
+		return "redirect:/page/mainWeb";
+	}
+	
+	@GetMapping("/weight")
+	public void weight() {
+	}
+	
+//	@GetMapping("/graph")
+//	public void graph(@RequestParam("id") String id, Model model) {
+//		model.addAttribute("graph",service.readWeight(id));
+//	}
+	
+	@GetMapping("/graph")
+	public void getSearch(@RequestParam("id") String id, Model model) {
+		model.addAttribute("graph",service.searchList(id));
+	}
+	
 }
