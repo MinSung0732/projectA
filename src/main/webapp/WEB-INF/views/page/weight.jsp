@@ -12,9 +12,9 @@
 	<form action="${cp}/page/weight" method="post">
 		<textarea rows="2" name="id" placeholder="이름"></textarea>
 		<br>
-		<textarea rows="2" name="weight" placeholder="몸무게"></textarea>
+		<textarea rows="2" name="weight" placeholder="몸무게" maxlength="5"></textarea>
 		<br>
-		<textarea rows="2" name="height" placeholder="키"></textarea>
+		<textarea rows="2" name="height" placeholder="키" maxlength="5"></textarea>
 		<br>
 		<input type="submit" value="작성완료">
 	</form>
