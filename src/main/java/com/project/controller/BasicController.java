@@ -2,10 +2,13 @@ package com.project.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.project.dto.ListDto;
 import com.project.dto.WeightDto;
@@ -64,6 +67,13 @@ public class BasicController {
 	@GetMapping("/graph")
 	public void getSearch(@RequestParam("id") String id, Model model) {
 		model.addAttribute("graph",service.searchList(id));
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	@ResponseBody
+	public String delete(@PathVariable Long id) {
+	    service.del(id);
+	    return "success";
 	}
 	
 }

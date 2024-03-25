@@ -16,7 +16,7 @@ import lombok.Setter;
 @Service
 public class BasicService {
 	
-	@Setter(onMethod_ = @Autowired)
+	@Autowired
 	private ListMapper mapper;
 	@Setter(onMethod_ = @Autowired)
 	private WeightMapper weightMapper;
@@ -52,16 +52,11 @@ public class BasicService {
             weightMapper.setterWeight(dto);
         } else {
            System.out.println("null");
-           System.out.println("null");
-           System.out.println("null");
-           System.out.println("null");
-           System.out.println("null");
-           System.out.println("null");
-           System.out.println("null");
-           System.out.println("null");
-           System.out.println("null");
-           System.out.println("null");
         }
     }
+	
+	public void del(long id) {
+		weightMapper.del(id);
+	}
 
 }

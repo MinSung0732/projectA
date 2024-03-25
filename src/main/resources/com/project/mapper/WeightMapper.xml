@@ -22,4 +22,9 @@
 		insert into weight_graph (id,weight,height) values (#{id},#{weight},#{height})
 	</insert>
 	
+	<delete id="del">
+		delete from weight_graph where no = #{id}
+	</delete>
+	
+	
 </mapper>
