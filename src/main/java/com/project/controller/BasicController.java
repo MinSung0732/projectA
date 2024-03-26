@@ -1,5 +1,10 @@
 package com.project.controller;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.project.dto.ListDto;
+import com.project.dto.SignUpDto;
 import com.project.dto.WeightDto;
 import com.project.service.BasicService;
 
@@ -30,6 +36,38 @@ public class BasicController {
 		System.out.println("컨트롤러진입");
 		model.addAttribute("list",service.list());
 		return "page/mainWeb";
+	}
+	
+	
+	@GetMapping("/signUp")	
+	public void signUp(Model model) {
+		System.out.println("회원가입 진입");
+		model.addAttribute("loginList",service.loginList());
+	}
+	
+	@PostMapping("/createId")
+	public String createId(SignUpDto dto) {
+		service.signUp(dto);
+		return "redirect:/page/mainWeb";
+	}
+	
+	@GetMapping("/createId")
+	public void createId() {
+		
+	}
+	
+	@PostMapping("/signIn")
+	public String signIn(SignUpDto dto, HttpServletRequest request) {
+		service.signIn(dto);
+		HttpSession session = request.getSession();
+		System.out.println("123");
+		session.setAttribute("myLogin", dto.getId());
+		return "redirect:/page/mainWeb";
+	}
+	
+	@GetMapping("/signIn")
+	public void signIn(SignUpDto dto) {
+		
 	}
 	
 	@GetMapping("/read")

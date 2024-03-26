@@ -12,6 +12,9 @@
 <body>
 	들어오기 성공
 	
+	<br> <br>
+	
+	현재 회원 : ${myLogin}
 	
 	<br>
 	<br>
@@ -33,10 +36,14 @@
 	<br>
 	<a href="${cp}/page/weight"><button type="button">내정보 입력</button></a>
 	<br>
+	
 	<form action="${cp}/page/graph">
 		<input type="text" name="id" placeholder="이름">
 		<input type="submit" value="검색">
 	</form>
+	
+	<br><br>
+	<a href="${cp}/page/signUp"><button type="button">회원가입</button></a>
 	
 	<script>
 		var toggleButton = document.getElementById('toggleButton');
