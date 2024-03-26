@@ -11,14 +11,12 @@ import com.project.dto.myWeightDto;
 import com.project.mapper.ListMapper;
 import com.project.mapper.WeightMapper;
 
-import lombok.Setter;
-
 @Service
 public class BasicService {
 	
 	@Autowired
 	private ListMapper mapper;
-	@Setter(onMethod_ = @Autowired)
+	@Autowired
 	private WeightMapper weightMapper;
 	
 	public ArrayList<ListDto> list() {
