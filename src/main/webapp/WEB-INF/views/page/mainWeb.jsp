@@ -11,8 +11,9 @@
 </head>
 <body>
 	들어오기 성공
+	<br><br>
+
 	
-	<br> <br>
 	
 	현재 회원 : ${myLogin}
 	
@@ -43,7 +44,7 @@
 	</form>
 	
 	<br><br>
-	<a href="${cp}/page/signUp"><button type="button">회원가입</button></a>
+	<a href="${cp}/page/signUp"><button type="button">회원가입 / 로그인</button></a>
 	
 	<script>
 		var toggleButton = document.getElementById('toggleButton');

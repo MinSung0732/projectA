@@ -57,11 +57,17 @@ public class BasicController {
 	}
 	
 	@PostMapping("/signIn")
-	public String signIn(SignUpDto dto, HttpServletRequest request) {
-		service.signIn(dto);
+	public String signIn(HttpServletRequest request,@RequestParam("id") String id , @RequestParam("pw")String word) {
+		SignUpDto a = service.signIn(id, word);
 		HttpSession session = request.getSession();
 		System.out.println("123");
-		session.setAttribute("myLogin", dto.getId());
+		if(a != null) {
+			session.setAttribute("myLogin", a.getId());
+			System.out.println("로그인 성공");
+			return "redirect:/page/mainWeb";
+		} else {
+			System.out.println("로그인 실패");
+		}
 		return "redirect:/page/mainWeb";
 	}
 	

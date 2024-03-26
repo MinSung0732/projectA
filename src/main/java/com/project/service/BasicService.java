@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.project.dto.ListDto;
 import com.project.dto.SignUpDto;
@@ -39,13 +40,14 @@ public class BasicService {
 		signUpMapper.signUp(dto);
 	}
 	
-	public SignUpDto signIn(SignUpDto dto) {
-		SignUpDto a = signUpMapper.signIn(dto);
-		if(a != null && encoder.matches(dto.getPw(), a.getPw())) {
-			return a;
+	public SignUpDto signIn(String id, String word) {
+		SignUpDto user = signUpMapper.signIn(id, word);
+		if(user != null && encoder.matches(word, user.getPw())) {
+			return user;
 		}
 		return null;
 	}
+	
 	
 	public ListDto read(long bno) {
 		return mapper.read(bno);
