@@ -9,8 +9,12 @@
 <title>테스트</title>
 </head>
 <body>
+	 <script>
+        var sessionId = "${sessionScope.myLogin}";
+    </script>
+
 	<form action="${cp}/page/weight" method="post">
-		<textarea rows="2" name="id" placeholder="이름"></textarea>
+        <input type="hidden" id="sessionId" name="id" value="${sessionId}">
 		<br>
 		<textarea rows="2" name="weight" placeholder="몸무게" maxlength="5"></textarea>
 		<br>
@@ -18,6 +22,10 @@
 		<br>
 		<input type="submit" value="작성완료">
 	</form>
+	
+	<script>
+        document.getElementById('sessionId').value = sessionId;
+    </script>
 	
 </body>
 </html>

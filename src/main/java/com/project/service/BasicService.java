@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.project.dto.ListDto;
 import com.project.dto.SignUpDto;
@@ -53,6 +52,10 @@ public class BasicService {
 		return mapper.read(bno);
 	}
 	
+	public int hit(long bno) {
+		return mapper.hit(bno);
+	}
+	
 	public void write(ListDto dto) {
 		mapper.write(dto);
 	}
@@ -78,6 +81,16 @@ public class BasicService {
            System.out.println("null");
         }
     }
+	
+	public boolean selectId(String id) {
+		System.out.println("Service :: selectId.............");
+		return signUpMapper.selectId(id);
+	}
+	
+	public boolean isIdExist(String id) {
+		int count = signUpMapper.countById(id);
+		return count > 0;
+	}
 	
 	public void del(long id) {
 		weightMapper.del(id);

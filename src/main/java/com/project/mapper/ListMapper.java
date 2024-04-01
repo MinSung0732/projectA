@@ -8,4 +8,5 @@ public interface ListMapper {
 	public ArrayList<ListDto> list();
 	public ListDto read(long bno);
 	public void write(ListDto dto);
+	public int hit(long bno);
 }

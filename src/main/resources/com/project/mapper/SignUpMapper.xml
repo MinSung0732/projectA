@@ -16,5 +16,13 @@
 		select * from pw where id=#{id}
 	</select>
 	
+	<select id="countById" resultType="int">
+		select count(*) from pw where id = #{id}
+	</select>
+	
+	<select id="selectId" resultType="boolean">
+		select count(*) from pw where id = #{id}
+	</select>
+	
 	
 </mapper>

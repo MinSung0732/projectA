@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+body{
+	background-color: #d0f5ff;	
+	margin: 0px;
+}
+/*기본 영역 세팅 (시작)*/
+#warp{
+	width: 1920px;
+	background-color: white;
+	margin: auto;
+	height:1770px;
+	display: flex;
+}
+#Category{
+	width: 357px;
+	height:1750px;
+	background-color: #9FE2FA99;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 10px 30px;
+	flex-direction: column;
+}
+
+#main{
+	width: 1503px;
+	text-align: center;
+}
+#top{
+	display: flex;
+	height: 110px;
+	border-bottom: 1px solid #18A4FF ;
+}
+
+#search{
+	display: flex;
+	width: 751.5px;
+	height: 110px;
+}
+
+.searchBar{
+	width: 450px;
+	height: 48px;
+	font-size: 26px;
+	border: 0;
+	border-radius: 15px;
+	outline: none;
+	padding-left: 10px;
+	background-color: rgb(233, 233, 233);
+}
+
+#textbar{
+	margin-top: 26px;
+	margin-left: 70px;
+}
+
+#profile{
+	display: flex;
+	width: 751.5px;
+	height: 110px;
+	justify-content: flex-end;
+}
+
+#profileZip{
+	display: flex;
+	margin-right: 70px;	
+}
+
+#profileName{
+	font: bold;
+	font-size: 26px;
+}
+
+.pf{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:92px;
+}
+
+/*기본 영역 세팅 (끝)*/
+/*CATEGORY 하위*/
+#Category img{
+	width: 200px;
+	height: 90px;
+	margin-bottom: 100px;
+}
+/*CATEGORY 하위(끝)*/
+/*뭔지 모르겠어요~*/
+#customSelect {
+  position: relative;
+  width: 200px;
+  margin: 20px;
+}
+
+#ab{
+	height: 72px;
+}
+
+.select-selected {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: none;
+  display:none;
+}
+
+.select-items div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.select-items div:hover {
+  background-color: #ddd;
+}
+
+.select-show {
+  display: block;
+}
+
+#myPage{
+	width: 1503px;
+	height: 1636px;
+}
+
+#myInfo{
+	margin: auto;
+	width: 1453px;
+	height: 200px;
+	border-radius: 20px;
+	background-color: #03BDFF;
+}
+
+#infoName{
+	display: flex;
+	width: 1427px;
+	height: 50px;
+	margin-left: auto;
+	font-size: 40px;
+	justify-content: flex-start;
+}
+
+#log{
+	display: flex;
+	width: 1393px;
+	height: 150px;
+	margin: auto;
+	margin-left: auto;
+
+}
+
+.info{
+	display: flex;
+	width: 645.5px;
+	font-size: 26px;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+#infoRe{
+	
+}
+
+#secondPage{
+	display: flex;
+	width: 1503px;
+	height: 1420px;
+}
+
+#myProfile{
+	width: 1503px;
+	height: 220px;
+}
+
+#myInfo{
+	width: 
+}
+
+#leftPage{
+	width: 751.5px;
+	background-color: #18A4FF;
+}
+
+#todayText{
+	width: 600px;
+	height: 130px;
+	margin: auto;
+	margin-top: 60px;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+#aboutMe{
+	width: 600px;
+	height: 220px;
+	margin: auto;
+	margin-top: 60px;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+#myFood{
+	width: 600px;
+	height: 830px;
+	margin: auto;
+	margin-top: 60px;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+#foodList{
+	height: 730px;
+	width: 250px;
+	text-align: left;
+	margin-left: 30px;
+	overflow-y: scroll;
+}
+
+#foodd{
+	display: flex;
+}
+
+#week{
+	height: 730px;
+	width: 350px;
+	text-align: center;
+	align-content: center;
+}
+
+.weekDay{
+	height: 100px;
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: lightyellow;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* 스크롤바 색상 */
+    border-radius: 5px; /* 스크롤바 슬라이더의 둥근 모서리 */
+}
+
+#todayTextBar{
+	font: bold;
+	font-size: 36px;
+}
+
+#aboutMeText{
+	font: bold;
+	font-size: 36px;
+}
+
+#myFoodText{
+	width: 600px;
+	height: 50px;
+	font: bold;
+	font-size: 36px;
+}
+
+#rightPage{
+	width: 751.5px;
+}
+
+#rightTop{
+	height: 710px;
+	align-content: cetner;
+	text-align: cetner;
+	background-color: #9FE2FA99;
+}
+
+#chart{
+	width: 600px;
+	height: 430px;
+	margin: auto;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+	position: relative;
+	top: 60px;
+}
+
+#woo{
+	margin-top: 70px;	
+}
+
+#rightBottom{
+	height: 710px;
+	background-color: #C1E7FF;
+}
+
+#calender{
+	margin: auto;
+}
+
+
+/* .dropbtn { */
+/*   background-color: #4CAF50; */
+/*   color: white; */
+/*   padding: 16px; */
+/*   font-size: 16px; */
+/*   border: none; */
+/*   cursor: pointer; */
+
+/* } */
+/* .dropdown { */
+/*   display: inline-block; */
+/*   position:relative; */
+/* } */
+
+/* .dropdown-content1 { */
+/* /*   display: none; */ */
+/* display:none; */
+/*   background-color: #f9f9f9; */
+/*   min-width: 160px; */
+/*   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+/*   z-index: 1; */
+/* } */
+/* .dropdown-content1 a { */
+/*   color: black; */
+/*   padding: 12px 16px; */
+/*   text-decoration: none; */
+/*   display: block; */
+/* } */
+/* .dropdown-content1 a:hover {background-color: #f1f1f1} */
+/* .dropdown:hover .dropdown-content1 { */
+/*   display: block; */
+/* } */
+/* .dropdown:hover .dropbtn { */
+/*   background-color: #3e8e41; */
+/* } */
+/*뭔지 모르겠어요~*/
+
+

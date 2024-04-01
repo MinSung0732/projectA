@@ -10,14 +10,21 @@
 <link rel="stylesheet" href="/resources/write.css" >
 </head>
 <body>
+	<script>
+        var sessionId = "${sessionScope.myLogin}";
+    </script>
+
 	<form action="${cp}/page/write" method="post">
 		<textarea rows="2" name="B_TITLE" placeholder="제목"></textarea>
 		<br>
-		<textarea rows="3" name="B_ID" placeholder="작성자"></textarea>
-		<br>
+		<input type="hidden" name="B_ID" id="sessionId" value="${sessionId}">
 		<textarea rows="5" name="B_TEXT" placeholder="글내용"></textarea>
 		<br>
 		<input type="submit" value="작성완료">
 	</form>
+	
+	<script>
+        document.getElementById('sessionId').value = sessionId;
+    </script>
 </body>
 </html>

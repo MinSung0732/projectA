@@ -13,11 +13,6 @@
 		#{id}
 	</select>
 	
-<!-- 	<select id="read" resultType="com.project.dto.ListDto"> -->
-<!-- 		SELECT * from weight_graph where id =  -->
-<!-- 		#{id} -->
-<!-- 	</select> -->
-	
 	<insert id="setterWeight">
 		insert into weight_graph (id,weight,height) values (#{id},#{weight},#{height})
 	</insert>

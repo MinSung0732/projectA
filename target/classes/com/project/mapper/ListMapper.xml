@@ -17,4 +17,8 @@
 		insert into free_board (B_TITLE,B_ID,B_TEXT) values (#{B_TITLE},#{B_ID},#{B_TEXT})
 	</insert>
 	
+	<update id="hit">
+		update free_board set b_hit = b_hit + 1 where b_no = #{bno}
+	</update>
+	
 </mapper>
